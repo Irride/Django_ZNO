@@ -20,5 +20,5 @@ from core.views import landing_page_ZNOtask
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('ZNOtask/', landing_page_ZNOtask),
+    path('', landing_page_ZNOtask),
 ]

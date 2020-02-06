@@ -1,17 +1,15 @@
-from django.http import HttpResponse
+#from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from datetime import datetime
+from core.models import ZNOSubject
 
 
 def landing_page_ZNOtask(request):
-    # hello = ("Hello")
-    # return HttpResponse("Hello")
+    subjects = ZNOSubject.objects.filter(is_active_subject=True)
 
     return render(
         request,
         "ZNOtask.html",
         context={
-            "Hello": "hello",
-            "now": datetime.now()
+            "subjects": subjects,
         },
     )
