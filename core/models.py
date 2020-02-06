@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class ZNOSubject(models.Model):
     subject_title = models.CharField(max_length=50)
@@ -12,4 +13,4 @@ class ZNOSubject(models.Model):
     subject_other = models.TextField(max_length=1000, default="")
 
     def __str__(self):
-        return (f'Subject: {self.subject_title}')
+        return f"Subject: {self.subject_title}"
