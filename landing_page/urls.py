@@ -1,4 +1,4 @@
-"""proect_landing_page URL Configuration
+"""landing_page URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from core.views import landing_page_ZNOtask
+from core.views import landing_page_view, about_us_view
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", landing_page_ZNOtask),
+    path("", landing_page_view),
+    path("about-us/", about_us_view),
 ]
